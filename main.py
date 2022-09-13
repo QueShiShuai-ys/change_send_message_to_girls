@@ -94,18 +94,18 @@ def format_temperature(temperature):
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
 
-# 返回一个数组，循环产生变量
- def split_birthday():
-   if birthday is None:
-     return None
-   return birthday.split('\n')
-
 #获取生日
 def get_birthday():
   next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
   if next < datetime.now():
     next = next.replace(year=next.year + 1)
   return (next - today).days
+
+# 返回一个数组，循环产生变量
+ def split_birthday():
+   if birthday is None:
+     return None
+   return birthday.split('\n')
 
 # 对传入的多个日期进行分割
 def split_dates(aim_dates):
