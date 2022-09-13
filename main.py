@@ -168,7 +168,7 @@ data = {
    },
   #生日
   "birthday_left":{
-     "value":get_birthday()
+     "value":get_birthday(),
      "color": get_random_color()
   },
   # 每日一言
@@ -177,8 +177,8 @@ data = {
     "color": get_random_color()
   },
   # 倒计时
-   "endday_left": get_counter_left,
-   "color": get_random_color()
+  # "endday_left": get_counter_left,
+  # "color": get_random_color()
 }
 
 # 倒计时添加到数据
