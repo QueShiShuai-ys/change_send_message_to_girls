@@ -96,7 +96,7 @@ def get_random_color():
 
 # 返回一个数组，循环产生变量
  def split_birthday():
-  if birthday is None:
+   if birthday is None:
      return None
    return birthday.split('\n')
 
