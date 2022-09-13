@@ -15,8 +15,8 @@ today = datetime.strptime(str(nowtime.date()), "%Y-%m-%d") #今天的日期
 start_date = os.getenv('START_DATE')
 city = os.getenv('CITY')
 # 生日，最终日倒数
-# birthday = os.getenv('BIRTHDAY')
-end_date = os.getenv('END_DATE')
+birthday = os.getenv('BIRTHDAY')
+# end_date = os.getenv('END_DATE')
 
 app_id = os.getenv('APP_ID')
 app_secret = os.getenv('APP_SECRET')
@@ -95,10 +95,10 @@ def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
 
 # 返回一个数组，循环产生变量
-# def split_birthday():
-#   if birthday is None:
-#     return None
-#   return birthday.split('\n')
+ def split_birthday():
+  if birthday is None:
+     return None
+   return birthday.split('\n')
 
 # 对传入的多个日期进行分割
 def split_dates(aim_dates):
@@ -167,18 +167,18 @@ data = {
     "color": get_random_color()
   },
   # 正计时
-  # "having_day": {
-  #   "value": get_memorial_days_count(),
-  #   "color": get_random_color()
-  # },
+   "having_day": {
+     "value": get_memorial_days_count(),
+     "color": get_random_color()
+   },
   # 每日一言
   "words": {
     "value": get_words(),
     "color": get_random_color()
   },
   # 倒计时
-  # "endday_left": get_counter_left,
-  # "color": get_random_color()
+   "endday_left": get_counter_left,
+   "color": get_random_color()
 }
 
 # 倒计时添加到数据
