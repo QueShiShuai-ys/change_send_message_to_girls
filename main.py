@@ -192,14 +192,14 @@ data = {
 #  }
 
 # 各种正计时
-for index, aim_date in enumerate(split_dates(start_date)):
-  key_name = "having_day"
-  if index != 0:
-    key_name = key_name + "_%d" % index
-  data[key_name] = {
-    "value": get_memorial_days_count(aim_date),
-    "color": get_random_color()
-  }
+#for index, aim_date in enumerate(split_dates(start_date)):
+#  key_name = "having_day"
+#  if index != 0:
+#    key_name = key_name + "_%d" % index
+#  data[key_name] = {
+#    "value": get_memorial_days_count(aim_date),
+#    "color": get_random_color()
+#  }
 
 if __name__ == '__main__':
   try:
