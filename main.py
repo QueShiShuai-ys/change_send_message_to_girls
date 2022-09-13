@@ -101,18 +101,6 @@ def get_birthday():
     next = next.replace(year=next.year + 1)
   return (next - today).days
 
-# 返回一个数组，循环产生变量
- def split_birthday():
-   if birthday is None:
-     return None
-   return birthday.split('\n')
-
-# 对传入的多个日期进行分割
-def split_dates(aim_dates):
-  if aim_dates is None:
-    return None
-  return aim_dates.split('\n')
-
 weather = get_weather()
 if weather is None:
   print('获取天气失败')
