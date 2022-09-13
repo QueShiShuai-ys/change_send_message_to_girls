@@ -95,10 +95,11 @@ def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
 
 # 返回一个数组，循环产生变量
-# def split_birthday():
-#   if birthday is None:
-#     return None
-#   return birthday.split('\n')
+ def split_birthday():
+   if birthday is None:
+     return None
+   return birthday.split('\n')
+
 #获取生日
 def get_birthday():
   next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
