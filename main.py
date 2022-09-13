@@ -95,10 +95,16 @@ def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
 
 # 返回一个数组，循环产生变量
- def split_birthday():
-   if birthday is None:
-     return None
-   return birthday.split('\n')
+# def split_birthday():
+#   if birthday is None:
+#     return None
+#   return birthday.split('\n')
+#获取生日
+def get_birthday():
+  next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
+  if next < datetime.now():
+    next = next.replace(year=next.year + 1)
+  return (next - today).days
 
 # 对传入的多个日期进行分割
 def split_dates(aim_dates):
@@ -171,6 +177,11 @@ data = {
      "value": get_memorial_days_count(),
      "color": get_random_color()
    },
+  #生日
+  "birthday_left":{
+     "value":get_birthday()
+     "color": get_random_color()
+  },
   # 每日一言
   "words": {
     "value": get_words(),
